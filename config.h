@@ -74,15 +74,25 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", NULL };
-static const char *termcmd[]  = { "st", NULL };
-static const char *browscmd[]  = { "qutebrowser", NULL };
+static const char *dmenucmd[]   = { "dmenu_run", NULL };
+static const char *termcmd[]    = { "st", NULL };
+static const char *browscmd[]   = { "qutebrowser", NULL };
+static const char *upbright[]   = { "brightnessctl", "set", "+10%", NULL };
+static const char *downbright[] = { "brightnessctl", "set", "10%-", NULL };
+static const char *upvolume[]   = { "amixer", "-q", "-D", "pulse", "set", "Master", "5%+", "unmute", NULL }
+static const char *downvolume[] = { "amixer", "-q", "-D", "pulse", "set", "Master", "5%-", "unmute", NULL }
+static const char *togmute[]    = { "amixer", "-q", "-D", "pulse", "set", "Master", "toggle", NULL }
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = browscmd } },
+    { 0,                            XF86XK_MonBrightnessUp,      spawn,          {.v = upbright } },
+    { 0,                            XF86XK_MonBrightnessDown,    spawn,          {.v = downbright } },
+    { 0,                            XF86XK_AudioRaiseVolume,     spawn,          {.v = upvolume } },
+    { 0,                            XF86XK_AudioLowerVolume,     spawn,          {.v = downvolume } },
+    { 0,                            XF86XK_AudioMute,            spawn,          {.v = togmute } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },

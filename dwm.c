@@ -40,6 +40,8 @@
 #include <X11/extensions/Xinerama.h>
 #endif /* XINERAMA */
 #include <X11/Xft/Xft.h>
+//library that allows use of media keys
+#include <X11/XF86keysym.h>
 
 #include "drw.h"
 #include "util.h"
