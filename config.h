@@ -17,7 +17,8 @@ static const char *fonts[]          = { "JetBrainsMonoNL Nerd Font:size=14:antia
 static const char dmenufont[]       = "JetBrainsMonoNL Nerd Font:size=14:antialias=true:autohint=true";
 
 /* pywal link */
-#include "/home/cathal/.cache/wal/colors-wal-dwm.h"
+//#include "/home/cathal/.cache/wal/colors-wal-dwm.h"
+#include "/home/cathal/.sources/dwm/.themes/gruvbox.h"
 
 /* tagging */
 static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
