@@ -38,6 +38,7 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       0,            0,           -1 },
     { "scrcpy",   NULL,       NULL,       0,            1,           -1 },
+    { "st-256color", NULL, "/home/cathal/.dev/scripts/notetaker", 0, 1,  -1 },
 };
 
 /* layout(s) */
@@ -89,12 +90,14 @@ static const char *downbright[] = { "brightnessctl", "set", "10%-", NULL };
 static const char *upvolume[]   = { "amixer", "-q", "-D", "pulse", "set", "Master", "5%+", "unmute", NULL };
 static const char *downvolume[] = { "amixer", "-q", "-D", "pulse", "set", "Master", "5%-", "unmute", NULL };
 static const char *togmute[]    = { "amixer", "-q", "-D", "pulse", "set", "Master", "toggle", NULL };
+static const char *notetaker[]  = {"st", "-e", "/home/cathal/.dev/scripts/notetaker", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = browscmd } },
+	{ MODKEY,                       XK_n,      spawn,          {.v = notetaker } },
     { 0,                            XF86XK_MonBrightnessUp,      spawn,          {.v = upbright } },
     { 0,                            XF86XK_MonBrightnessDown,    spawn,          {.v = downbright } },
     { 0,                            XF86XK_AudioRaiseVolume,     spawn,          {.v = upvolume } },
