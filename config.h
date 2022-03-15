@@ -90,7 +90,7 @@ static const char *downbright[] = { "brightnessctl", "set", "10%-", NULL };
 static const char *upvolume[]   = { "amixer", "-q", "-D", "pulse", "set", "Master", "5%+", "unmute", NULL };
 static const char *downvolume[] = { "amixer", "-q", "-D", "pulse", "set", "Master", "5%-", "unmute", NULL };
 static const char *togmute[]    = { "amixer", "-q", "-D", "pulse", "set", "Master", "toggle", NULL };
-static const char *notetaker[]  = {"st", "-e", "/home/cathal/.dev/scripts/notetaker", NULL };
+static const char *notetaker[]  = { "st", "-e", "/home/cathal/.dev/scripts/notetaker", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
