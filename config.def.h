@@ -13,8 +13,10 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad            = 14;       /* vertical padding of bar */
 static const int sidepad            = 14;       /* horizontal padding of bar */
 static const int user_bh            = 30;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
-static const char *fonts[]          = { "Iosevka:size=14:antialias=true:autohint=true" };
-static const char dmenufont[]       = "Iosevka=14:antialias=true:autohint=true";
+// static const char *fonts[]          = { "Iosevka:size=14:antialias=true:autohint=true" };
+// static const char dmenufont[]       = "Iosevka=14:antialias=true:autohint=true";
+static const char *fonts[]          = { "Fantasque Sans Mono:size=14:antialias=true:autohint=true" };
+static const char dmenufont[]       = "Fantasque Sans Mono=14:antialias=true:autohint=true";
 
 /* pywal link */
 //#include "/home/cathal/.cache/wal/colors-wal-dwm.h"
