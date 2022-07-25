@@ -20,7 +20,7 @@ static const char dmenufont[]       = "Fantasque Sans Mono=14:antialias=true:aut
 
 /* pywal link */
 //#include "/home/cathal/.cache/wal/colors-wal-dwm.h"
-#include "/home/cathal/.sources/dwm/.themes/gruvbox.h"
+#include ".themes/gruvbox.h"
 
 /* tagging */
 //static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
