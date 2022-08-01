@@ -93,11 +93,13 @@ static const char *upvolume[]   = { "amixer", "-q", "-D", "pulse", "set", "Maste
 static const char *downvolume[] = { "amixer", "-q", "-D", "pulse", "set", "Master", "5%-", "unmute", NULL };
 static const char *togmute[]    = { "amixer", "-q", "-D", "pulse", "set", "Master", "toggle", NULL };
 static const char *notetaker[]  = { "st", "-e", "/home/cathal/.dev/scripts/notetaker", NULL };
+static const char *tabterm[]    = { "tabbed", "-r", "2", "st", "-w", "", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+  { MODKEY,                       XK_d,      spawn,          {.v = tabterm } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = browscmd } },
 	{ MODKEY,                       XK_n,      spawn,          {.v = notetaker } },
     { 0,                            XF86XK_MonBrightnessUp,      spawn,          {.v = upbright } },
