@@ -86,7 +86,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]   = { "dmenu_run", NULL };
 static const char *termcmd[]    = { "st", NULL };
-static const char *browscmd[]   = { "qutebrowser", NULL };
+static const char *browscmd[]   = { "tabbed", "-c", "surf", "-e",  NULL };
 static const char *upbright[]   = { "brightnessctl", "set", "+10%", NULL };
 static const char *downbright[] = { "brightnessctl", "set", "10%-", NULL };
 static const char *upvolume[]   = { "amixer", "-q", "-D", "pulse", "set", "Master", "5%+", "unmute", NULL };
@@ -99,7 +99,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-  { MODKEY,                       XK_d,      spawn,          {.v = tabterm } },
+  { MODKEY|ShiftMask,             XK_o,      spawn,          {.v = tabterm } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = browscmd } },
 	{ MODKEY,                       XK_n,      spawn,          {.v = notetaker } },
     { 0,                            XF86XK_MonBrightnessUp,      spawn,          {.v = upbright } },
@@ -116,6 +116,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_h,      setcfact,       {.f = +0.25} },
 	{ MODKEY|ShiftMask,             XK_l,      setcfact,       {.f = -0.25} },
+
 	{ MODKEY|ShiftMask,             XK_o,      setcfact,       {.f =  0.00} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY|Mod4Mask,              XK_u,      incrgaps,       {.i = +1 } },
