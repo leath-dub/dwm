@@ -745,8 +745,6 @@ void drawbar(Monitor *m)/*{{{*/
 		if (m->sel) {
             drw_setscheme(drw, scheme[SchemeTagsNorm]);
 			drw_text(drw, x, 0, w - 2 * sp, bh, lrpad / 2, m->sel->name, 0);
-			if (m->sel->isfloating)
-				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
 		} else {
             drw_setscheme(drw, scheme[SchemeInfoNorm]);
 			drw_rect(drw, x, 0, w - 2 * sp, bh, 1, 1);

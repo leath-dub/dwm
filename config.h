@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappih    = 14;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 14;       /* vert inner gap between windows */
@@ -18,9 +18,7 @@ static const int user_bh            = 30;        /* 0 means that dwm will calcul
 static const char *fonts[]          = { "Fantasque Sans Mono:size=14:antialias=true:autohint=true" };
 static const char dmenufont[]       = "Fantasque Sans Mono=14:antialias=true:autohint=true";
 
-/* pywal link */
-//#include "/home/cathal/.cache/wal/colors-wal-dwm.h"
-#include ".themes/gruvbox.h"
+#include "thm/nord.h"
 
 /* tagging */
 //static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
